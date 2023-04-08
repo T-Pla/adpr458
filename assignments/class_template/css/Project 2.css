@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    
+}
+
+
 :root {
     --primary_color: #033f5f;
     --seconday_color: #007CBC;
@@ -26,19 +34,12 @@ p{
 img{
     max-width: 100%; /*This makes all of your images responsive*/
 }
-.container {
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem; 
-}
-.container > * {
-    grid-column: span 12;
-}
+
 
 /* Media Queries for larger screens than 768px */
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 48rem) 
   
-
+{}
     .col-span-2{
         grid-column: span 2;
     }
@@ -70,3 +71,12 @@ img{
         grid-column: span 11; 
     
 }/* Closes the media query */
+
+/*////// Layout ////////*/
+.container {
+    background-color: black;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem; 
+    
+}
