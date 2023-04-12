@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
-    font-family: sans-serif;
-
-    
+    font-family: sans-serif;    
 }
-
+body {
+    margin: 0;
+}
 
 :root {
     --primary_color: #033f5f;
@@ -12,10 +12,6 @@
     --highlight_color: #F5BA36;
     --neutral_grey: #747e83;
     --neutral_light: #525252; 
-}
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 h1 {
@@ -36,10 +32,129 @@ img{
 }
 
 
+/*******Components********/
+
+.card {
+    text-align:center;
+    margin: .25rem;
+    padding-bottom: .5rem;
+    box-shadow: 0.125 rem .5rem rgba(0,0,0,.15)
+}
+.card-title{
+    margin: 0.75 rem 0 0 0;
+    padding:0.2rem 0.5rem;
+}
+.card-text{
+    margin: 0.5 rem 0 1rem 0;
+    padding:0.2rem 0.5rem;
+}
+
+
+
+
+
+.circle {
+    border-radius: 50%;
+    border: 5px solid #9abcf8
+}
+a:link, a:visited{
+     color:#9abcf8;
+     text-decoration:none;
+}
+a:hover{
+    color:#6b95dd;
+    text-decoration:underline;
+}
+
+
+    /*********Navigationusingflexbox**********/
+    nav{
+        background-color:white;
+        padding: 0 1rem;
+        display: flex;
+        justify-content:flex-start; 
+        position: sticky;
+        top: 0;
+
+
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+    nav a:link, nav a:visited{
+        color: black;
+        text-decoration: none;
+        font-size: .75rem;
+        padding: 1rem;
+        display: block;
+        transition:ease-in-out 250ms; 
+
+    }
+    nav a:hover{
+        background-color:#9abcf8;
+        color: white;
+    }
+    .button:link, .button:visited{
+        color:white;
+        background-color:rgb(0, 112, 204);
+        padding: 1rem 1.75rem;
+        text-align: center;
+        text-decoration: none;
+        border-radius: .5rem;
+        box-shadow: 0 .125rem .5rem rgb(0, 102, 204);
+        display: inline-block;
+        margin: 0.25rem .25rem 0;
+        transition: background-color 0.5s ease; 
+    }
+    .button:hover{
+        background-color: #6e8fc7;
+    }
+
+/*////// Layout ////////*/
+.container {
+    background-color:rgb(254, 254, 255);
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem; 
+    margin: 0 auto;
+    width: min(95%, 75rem);  
+}
+.container > *{
+    grid-column: span 12;
+} 
+header img {
+    width: 10%;
+}
+.logo {
+    width: 35px;
+}
+
+.black { 
+    background-color: black;
+}
+.flex_center {
+    justify-content: center;
+}
+.flex_end {
+    justify-content: flex-end;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+
+
+
+
 /* Media Queries for larger screens than 768px */
-@media screen and (min-width: 48rem) 
-  
-{}
+@media screen and (min-width: 48rem){
     .col-span-2{
         grid-column: span 2;
     }
@@ -58,7 +173,7 @@ img{
     .col-span-7{
         grid-column: span 7;
     }
-    .col-span-8{
+    .col-span-8 {
         grid-column: span 8;
     }
     .col-span-9{
@@ -69,81 +184,5 @@ img{
     }
     .col-span-11{
         grid-column: span 11; 
-    
+    }
 }/* Closes the media query */
-.circle {
-    border-radius: 50%;
-    border: 5px solid #9abcf8
-}
-a:link, a:visited{
-     color:#9abcf8;
-     text-decoration:none;
-}
-a:hover{
-    color:#6b95dd;
-    text-decoration:underline;
-}
-
-
-    /*********Navigationusingflexbox**********/
-    nav{
-        background-color:black;
-        padding: 0 1rem;
-        display: flex;
-        justify-content: center; 
-        position: sticky;
-        top: 0;
-
-
-    }
-    nav ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-flow: row wrap;
-
-    }
-    nav a:link, nav a:visited{
-        color: white;
-        text-decoration: none;
-        font-size: 1.125rem;
-        padding: 1rem;
-        display: block;
-        transition:ease-in-out 250ms; 
-
-    }
-    nav a:hover{
-        background-color:#9abcf8;
-        color: white;
-    }
-    .button:link, .button:visited{
-        color:white;
-        background-color: #9abcf8;
-        padding: 1rem 1.75rem;
-        text-align: center;
-        text-decoration: none;
-        border-radius: .5rem;
-        box-shadow: 0 .125rem .5rem rgb(0, 102, 204);
-        display: inline-block;
-        margin: 0.25rem .25rem 0;
-        transition: background-color 0.5s ease; 
-    }
-    .button:hover{
-        background-color: #6e8fc7;
-    }
-
-/*////// Layout ////////*/
-.container {
-    background-color:rgb(0, 102, 204);
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem; 
-    margin: 0 auto;
-    Width: min(95%, 75rem);
-
-    
-    
-    
-    
-}
