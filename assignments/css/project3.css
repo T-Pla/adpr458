@@ -30,6 +30,9 @@ img {
     border-radius: 50%;
     border: 5px solid #9abcf8
 }
+.center {
+    text-align: center;
+}
 a:link, a:visited{
      color:#9abcf8;
      text-decoration:none;
