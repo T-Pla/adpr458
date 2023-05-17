@@ -147,7 +147,7 @@ justify-content: right;
         .col-span-9{
             grid-column:span 10;          
         }
-        .col-span-2{
+        .col-span-3{
             grid-column:span 3;
         }
         .col-span-6{
