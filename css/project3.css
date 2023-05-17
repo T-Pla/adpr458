@@ -28,6 +28,9 @@ padding: .5rem;}
 h3 {font-size: 1.25rem;
     color: white;
 }
+p{
+    color: white
+}
 img { 
     max-width: 100%;
 }
