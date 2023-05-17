@@ -25,7 +25,9 @@ h2 {
 font-size: 1.5rem;
 color: white;
 padding: .5rem;}
-h3 {font-size: 1.25rem;}
+h3 {font-size: 1.25rem;
+    color: white;
+}
 img { 
     max-width: 100%;
 }
