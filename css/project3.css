@@ -150,6 +150,9 @@ justify-content: right;
         .col-span-2{
             grid-column:span 3;
         }
+        .col-span-6{
+            grid-column:span 6;
+        }
     }
 
 .work-section{
